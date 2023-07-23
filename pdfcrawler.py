@@ -6,7 +6,7 @@ def pdf_to_text_url(url):
     # Download the PDF file from the URL
     response = requests.get(url)
     with open("temp.pdf", "wb") as file:
-        file.write(response.content)
+        file.write(response.content)    
 
     # Extract text from the PDF
     with pdfplumber.open("temp.pdf") as pdf:
